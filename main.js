@@ -8,7 +8,7 @@ async function getProducts() {
 function renderProducts(products) {
         products.map((product) => {
             productsEl.innerHTML += `
-                <div class="product">
+                <div class="product" data-product-id=${product.id}>
                     <img src="${product.image}" alt="product.name">
                     <p>name: ${product.name}</p>
                     <p>price: $${(product.priceCents / 100).toFixed(2)}</p>
